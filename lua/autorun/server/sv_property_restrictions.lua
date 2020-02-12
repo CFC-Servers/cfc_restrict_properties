@@ -13,5 +13,5 @@
 hook.Remove( "CanProperty", "CFC_RestrictPersist" )
 
 hook.Add( "CanProperty", "persist_property", function( ply, property, ent )
-	if ( !ply:IsAdmin() && property == "persist" ) then return false else return true end
+    if not ply:IsAdmin() and property == "persist" then return false end
 end )
